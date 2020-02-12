@@ -1,6 +1,6 @@
 <?php
 
-namespace Lawnstarter\LaravelLogTest\Console\Commands;
+namespace LaravelLogTest\Console\Commands;
 
 use Illuminate\Console\Command;
 

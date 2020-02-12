@@ -1,7 +1,6 @@
-  
 <?php
 
-namespace Lawnstarter\LaravelLogTest;
+namespace LaravelLogTest;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
