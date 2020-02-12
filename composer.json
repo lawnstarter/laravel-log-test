@@ -3,6 +3,7 @@
     "description": "a simple command that allows you to test the laravel logging functionality",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "LawnStarter",
