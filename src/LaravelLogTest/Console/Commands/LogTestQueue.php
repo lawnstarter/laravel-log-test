@@ -2,8 +2,8 @@
 
 namespace LaravelLogTest\Console\Commands;
 
-use App\Jobs\ThrowUncaughtException;
 use Illuminate\Console\Command;
+use LaravelLogTest\Jobs\ThrowUncaughtException;
 
 class LogTestQueue extends Command
 {
