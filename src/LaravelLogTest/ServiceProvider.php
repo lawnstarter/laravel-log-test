@@ -20,6 +20,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->commands([
             Console\Commands\LogTest::class,
+            Console\Commands\LogTestCommand::class,
+            Console\Commands\LogTestQueue::class,
+            
         ]);
     }
 

@@ -3,22 +3,23 @@
 namespace LaravelLogTest\Console\Commands;
 
 use Illuminate\Console\Command;
+use LaravelLogTest\Jobs\ThrowUncaughtException;
 
-class LogTest extends Command
+class LogTestQueue extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'log:test';
+    protected $signature = 'log:test-queue';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'test your logging function by logging and error with the message "log:test" directly';
+    protected $description = 'test your logging function by dispatching a queue job that throws an unhandled exception';
 
     /**
      * Create a new command instance.
@@ -38,7 +39,7 @@ class LogTest extends Command
      */
     public function handle()
     {
-        throw new \Exception('TEST: uncaught exception thrown in command');
+        ThrowUncaughtException::dispatch();
     }
 
 
