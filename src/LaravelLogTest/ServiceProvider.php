@@ -2,8 +2,6 @@
 
 namespace LaravelLogTest;
 
-use Psy\Readline\Hoa\Console;
-
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
