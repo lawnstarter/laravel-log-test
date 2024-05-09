@@ -4,6 +4,7 @@ namespace LaravelLogTest\Console\Commands;
 
 use App\Jobs\ThrowUncaughtException;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class LogTestCommand extends Command
 {
@@ -39,6 +40,7 @@ class LogTestCommand extends Command
      */
     public function handle()
     {
+        Log::warning('TEST: log warning statement called directly in command');
         throw new \Exception('TEST: uncaught exception thrown in command');
     }
 

@@ -3,6 +3,7 @@
 namespace LaravelLogTest\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class LogTest extends Command
 {
@@ -38,7 +39,7 @@ class LogTest extends Command
      */
     public function handle()
     {
-        throw new \Exception('TEST: uncaught exception thrown in command');
+        Log::warning('test');
     }
 
 

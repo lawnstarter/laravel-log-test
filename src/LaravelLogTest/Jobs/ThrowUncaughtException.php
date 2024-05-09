@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 
 class ThrowUncaughtException implements ShouldQueue
 {
@@ -28,6 +29,7 @@ class ThrowUncaughtException implements ShouldQueue
      */
     public function handle(): void
     {
+        Log::warning('TEST: log warning statement called directly in queue job');
         throw new \Exception('TEST: uncaught exception thrown in queue job');
     }
 }
